@@ -1,0 +1,45 @@
+<h1>テスト</h1>
+
+<%= form_with(model: @weight, local: true) do |form| %>
+
+    <div class="time">
+    
+    <%= form.label :登録日 %>
+    <%= form.date_field :start_time %>
+  </div>
+
+  <div class="weight">
+    <%= form.label :体重 %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div class="calorie">
+    <%= form.label :朝食（カロリー） %>
+    <%= form.text_field :breakfast %>
+  </div>
+
+  <div class="calorie">
+    <%= form.label :昼食（カロリー） %>
+    <%= form.text_field :lunch %>
+  </div>
+
+  <div class="calorie">
+    <%= form.label :夕食（カロリー） %>
+    <%= form.text_field :dinner %>
+  </div>
+
+  <div class="calorie">
+    <%= form.label :間食（カロリー） %>
+    <%= form.text_field :snack %>
+  </div>
+
+  <div class="memo">
+    <%= form.label :一言メモ %>
+    <%= form.text_area :memo %>
+  </div>
+
+  <div class="submit">
+    <%= form.submit %>
+  </div>
+
+<% end %>

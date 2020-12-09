@@ -1,0 +1,15 @@
+<h1>Weight Manager</h1>
+
+
+<%= link_to '体重を記録する', new_weight_path %> 
+<%= month_calendar events: @weights do |date, events| %>
+  <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= "#{event.weight}kg" %></br>
+      <%= "総摂取カロリー#{event.breakfast + event.lunch + event.dinner + event.snack}kcal"%></br>
+      <%= event.memo%>
+    </div>
+  <% end %>
+<% end %>
